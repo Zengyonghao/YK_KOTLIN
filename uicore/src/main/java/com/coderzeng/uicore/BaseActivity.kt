@@ -2,6 +2,8 @@ package com.coderzeng.uicore
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 
 /**
  * <pre>
@@ -13,11 +15,12 @@ import androidx.appcompat.app.AppCompatActivity
  * </pre>
  */
 
- abstract class BaseActivity : AppCompatActivity() {
-    abstract var layoutId:Int
+ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
+    abstract var layoutId:Int//布局ID
+    lateinit var binding : B//viewDataBinding
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
-        setContentView(layoutId)
+        binding  = DataBindingUtil.setContentView(this,layoutId)
 
     }
 

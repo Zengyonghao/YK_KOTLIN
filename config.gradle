@@ -1,0 +1,15 @@
+ext{
+    isModule = false
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            targetSdkVersion: 28
+
+    ]
+    appId = [
+        "app" : "com.coderzeng.yk_kotlin",
+        "binding" : "com.coderzeng.yk_kotlin.ui.binding"
+
+    ]
+
+}

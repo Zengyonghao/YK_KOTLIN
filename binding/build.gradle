@@ -1,17 +1,28 @@
-apply plugin: 'com.android.library'
+if (isModule) {
+    apply plugin: "com.android.library"
+}else {
+    apply plugin: "com.android.application"
+}
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
+
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
 
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
+        if (!isModule){
+            applicationId appId.get("binding")
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
@@ -39,4 +50,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':commonlibrary')
     implementation project(path: ':uicore')
+    implementation project(path: ':systemcore')
 }

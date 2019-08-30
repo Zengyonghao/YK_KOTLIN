@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/binding" />
             <option value="$PROJECT_DIR$/commonlibrary" />
             <option value="$PROJECT_DIR$/netcore" />
+            <option value="$PROJECT_DIR$/reslibrary" />
             <option value="$PROJECT_DIR$/systemcore" />
             <option value="$PROJECT_DIR$/uicore" />
           </set>

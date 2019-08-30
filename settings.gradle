@@ -1,1 +1,1 @@
-include ':app', ':binding', ':commonlibrary', ':netcore', ':systemcore', ':uicore'
+include ':app', ':binding', ':commonlibrary', ':netcore', ':systemcore', ':uicore', ':reslibrary'
