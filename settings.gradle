@@ -1,0 +1,1 @@
+include ':app', ':binding', ':commonlibrary', ':netcore', ':systemcore', ':uicore'
